@@ -17,11 +17,11 @@ get_header(); ?>
 
 <div class="main-grid">
 	<main class="main-content">
-		<div class="home-heros">
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php $my_query = new WP_Query('showposts=1'); ?>
+			<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 				<?php get_template_part( 'template-parts/content-new', get_post_format() ); ?>
 			<?php endwhile; ?>
 
@@ -29,6 +29,12 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 			<?php endif; // End have_posts() check. ?>
+		<div class="home-heros">
+
+			<?php /* Start the Loop */ ?>
+			<?php query_posts('offset=2'); while ( have_posts() ) : the_post();?>
+				<?php get_template_part( 'template-parts/content-new', get_post_format() ); ?>
+			<?php endwhile; ?>
 
 			<?php /* Display navigation to next/previous pages when applicable */ ?>
 			<?php
