@@ -1,14 +1,12 @@
-.main-container {
-  @include grid-row;
-}
-
 .main-grid {
+  @include grid-row;
   @include grid-column(12);
   @include grid-column-position(center);
-  margin-top: 1rem;
 
   @include breakpoint(medium) {
     margin-top: 3rem;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   &.sidebar-left {
@@ -34,6 +32,7 @@
   .main-content {
     @include breakpoint(small) {
       @include grid-column(12);
+      padding:0;
     }
 
     @include breakpoint(medium) {
@@ -51,5 +50,19 @@
       margin-top: 1rem;
     }
 
+  }
+}
+
+// home
+.home-heros {
+  @include grid-column(8);
+}
+
+.home-events {
+  @include grid-column(4);
+  .home-events-block {
+    height: 600px;
+    background-color: #cccccc;
+    display: block;
   }
 }

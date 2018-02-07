@@ -17,7 +17,7 @@ get_header(); ?>
 
 <div class="main-grid">
 	<main class="main-content">
-		<div class="tbd">
+		<div class="home-heros">
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -42,8 +42,8 @@ get_header(); ?>
 				</nav>
 			<?php endif; ?>
 		</div>
-		<div class=".sidebar">
-			
+		<div class="home-events">
+			<div class="home-events-block"></div>
 		</div>
 	</main>
 
