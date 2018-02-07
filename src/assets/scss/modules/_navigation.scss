@@ -1,0 +1,50 @@
+
+// Tablet and desktop menu
+.header-logo {
+  @include grid-column-position(center);
+  @include grid-column(3);
+  padding: 2rem;
+}
+
+nav.header-nav {
+  ul.menu {
+    @include grid-row;
+    // display: table;
+    li {
+      @include grid-column(3);
+      // vertical-align: middle;
+      // display: table-cell;
+      a {
+        @include nav-font;
+        padding-top: 0;
+        padding-bottom: 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.8rem;
+        line-height: 2.5rem;
+        text-transform: uppercase;
+
+        &.button {
+          color: $primary-color;
+          margin: 0 0.25rem;
+          line-height: 2.4rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+// WP post navigation
+.post-navigation {
+  @include clearfix;
+}
+
+.nav-previous {
+  float:left;
+}
+
+.nav-next {
+  float:right;
+}
