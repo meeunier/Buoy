@@ -17,6 +17,7 @@ get_header(); ?>
 
 <div class="main-grid">
 	<main class="main-content">
+		<div class="featured-hero"
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -31,7 +32,7 @@ $my_query = new WP_Query( array( 'p' => $sticky[0] ) ); ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 			<?php endif; // End have_posts() check. ?>
-		<div class="home-heros">
+		<div class="home-posts">
 
 			<?php /* Start the Loop */ ?>
 			<?php $query = new WP_Query( array( 'post__not_in' => get_option( 'sticky_posts' ) ) ); ?>
