@@ -20,10 +20,12 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
-			<?php $my_query = new WP_Query('showposts=1'); ?>
+			<?php $sticky = get_option( 'sticky_posts' );
+$my_query = new WP_Query( array( 'p' => $sticky[0] ) ); ?>
 			<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
-				<?php get_template_part( 'template-parts/content-new', get_post_format() ); ?>
-			<?php endwhile; ?>
+			<?php get_template_part( 'template-parts/content-new', get_post_format() ); ?>
+			<?php endwhile; wp_reset_query(); ?>
+
 
 			<?php else : ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
@@ -32,8 +34,9 @@ get_header(); ?>
 		<div class="home-heros">
 
 			<?php /* Start the Loop */ ?>
-			<?php query_posts('offset=2'); while ( have_posts() ) : the_post();?>
-				<?php get_template_part( 'template-parts/content-new', get_post_format() ); ?>
+			<?php $query = new WP_Query( array( 'post__not_in' => get_option( 'sticky_posts' ) ) ); ?>
+			<?php while ($query->have_posts()) : $query->the_post(); ?>
+			<?php get_template_part( 'template-parts/content-new', get_post_format() ); ?>
 			<?php endwhile; ?>
 
 			<?php /* Display navigation to next/previous pages when applicable */ ?>
