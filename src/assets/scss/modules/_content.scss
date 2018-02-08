@@ -71,9 +71,29 @@
 }
 
 // home
+.featured-hero {
+  position: relative;
+  overflow: hidden;
+
+  .fixed-home-title {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 0.75em 1em;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, .8);
+
+    @supports ((-webkit-backdrop-filter: blur(1em)) or (backdrop-filter: blur(1em))) {
+    background-color: rgba(255, 255, 255, .2);
+    -webkit-backdrop-filter: blur(1em);
+    backdrop-filter: blur(1em);
+    }
+  }
+
 .featured-cover {
   @include grid-column(12);
-
+  }
 }
 .home-posts {
   @include breakpoint(large) {
