@@ -13,7 +13,7 @@
   <div class="footer-wrapper">
     <div class="footer-logo">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="logo" rel="home">
-        <img class="float-center" src="<?php echo get_template_directory_uri(); ?>/logo-footer.png" alt="Logo" width="50px" height="50px" />
+        <img class="float-center" src="<?php echo get_template_directory_uri(); ?>/logo-footer.png" alt="Logo" width="40px" height="40px" />
       </a>
     </div>
   </div>
@@ -32,7 +32,7 @@
           <ul class="footer-about">
             <h3>Brands</h3>
             <li><a href="#">Sell products on PaddleGuru</a></li>
-            <li><a href="#">Advertise products/a></li>
+            <li><a href="#">Advertise products</a></li>
             <li><a href="#">Shop on PaddleGuru</a></li>
           </ul>
           <ul class="footer-about">

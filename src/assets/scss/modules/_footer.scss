@@ -10,7 +10,7 @@ footer.footer {
 .footer-logo {
   @include grid-column-position(center);
   @include grid-column(3);
-  padding: 2rem;
+  padding: 1.4rem;
 }
 
 .footer-container {
