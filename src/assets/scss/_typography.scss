@@ -19,6 +19,23 @@
     padding: 2rem;
 }
 
+@mixin footer-headings-font {
+    font-size: 15px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: $white;
+}
+
+@mixin footer-links-font {
+    font-size: 12px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;;
+    color: $white;
+}
+
 // .fixed-h2 {
 //   position: absolute; /* absolute position (so we can position it where we want)*/
 //   bottom: 0%; /* position will be on bottom */
