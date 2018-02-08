@@ -5,10 +5,38 @@
   height: rem-calc(200);
 
   @include breakpoint(medium) {
-    height: rem-calc(400);
+    height: rem-calc(250);
   }
 
   @include breakpoint(xlarge) {
-    height: rem-calc(500);
+    height: rem-calc(350);
+  }
+}
+
+.featured-cover {
+  .featured-hero {
+    height: rem-calc(200);
+
+    @include breakpoint(medium) {
+      height: rem-calc(400);
+    }
+
+    @include breakpoint(xlarge) {
+      height: rem-calc(500);
+    }
+  }
+}
+
+.home-posts {
+  .featured-hero {
+    height: rem-calc(200);
+
+    @include breakpoint(medium) {
+      height: rem-calc(300);
+    }
+
+    @include breakpoint(xlarge) {
+      height: rem-calc(400);
+    }
   }
 }

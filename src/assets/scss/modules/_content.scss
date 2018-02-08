@@ -58,9 +58,15 @@
 // home
 .featured-cover {
   @include grid-column(12);
+  article {
+    margin-bottom: 2rem;
+  }
 
 }
 .home-posts {
+  article {
+    margin-bottom: 2rem;
+  }
   @include breakpoint(large) {
     @include grid-column(8);
   }
