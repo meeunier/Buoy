@@ -49,7 +49,7 @@
         display: block;
         float: left;
         width: 20rem;
-        border-bottom: 0.3rem solid $black;
+        border-bottom: 0.2rem solid $secondary;
       }
     }
     article {
@@ -106,6 +106,16 @@
     @include grid-column(4);
   }
   @include grid-column(12);
+
+  article {
+    margin-bottom: 0 !important;
+    h4 a {
+    @include section-h4-font;
+    }
+    p {
+    @include section-body-font;
+    }
+  }
 }
 
 

@@ -6,7 +6,7 @@
     font-weight: 600 !important;
     font-style: italic;
     letter-spacing: 0.08rem;
-    color: $black;
+    color: $secondary;
 }
 
 @mixin home-h2-font {
@@ -15,7 +15,7 @@
     font-style: italic;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-    color: $black;
+    color: $white;
     padding: 2rem;
 }
 
@@ -26,8 +26,26 @@
     font-style: italic;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-    color: $black;
+    color: $secondary;
     padding-top: 2rem;
+}
+@mixin section-h4-font {
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: $black;
+}
+@mixin section-body-font {
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+    font-family: "Lora", serif;
+    font-weight: normal;
+    font-style: normal;
+    color: $black;
 }
 
 @mixin footer-headings-font {
@@ -47,6 +65,16 @@
     font-family: "Barlow", sans-serif;
     font-weight: 500;
     color: $white;
+}
+
+@mixin button-font {
+    font-size: 1rem;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600 !important;
+    font-style: italic;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: $primary;
 }
 
 // .fixed-h2 {
