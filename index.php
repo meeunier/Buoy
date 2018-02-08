@@ -17,12 +17,12 @@ get_header(); ?>
 
 <div class="main-grid">
 	<main class="main-content">
-		<div class="featured-hero"
-		<?php if ( have_posts() ) : ?>
+		<div class="featured-cover">
+			<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
-			<?php $sticky = get_option( 'sticky_posts' );
-$my_query = new WP_Query( array( 'p' => $sticky[0] ) ); ?>
+			<?php $sticky = get_option( 'sticky_posts' ); ?>
+			<?php $my_query = new WP_Query( array( 'p' => $sticky[0] ) ); ?>
 			<?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 			<?php get_template_part( 'template-parts/content-new', get_post_format() ); ?>
 			<?php endwhile; wp_reset_query(); ?>
@@ -32,6 +32,7 @@ $my_query = new WP_Query( array( 'p' => $sticky[0] ) ); ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 			<?php endif; // End have_posts() check. ?>
+		</div>
 		<div class="home-posts">
 
 			<?php /* Start the Loop */ ?>
