@@ -9,6 +9,15 @@
     color: $black;
 }
 
+@mixin home-h2-font {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: $black;
+}
+
 $pg-nav: "Barlow Semi Condensed", sans-serif;
 $pg-headings: "Barlow Condensed", sans-serif;
 $pg-sub-headings: "Barlow Semi Condensed", sans-serif;

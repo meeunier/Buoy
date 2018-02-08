@@ -1,14 +1,12 @@
-.main-container {
-  @include grid-row;
-}
-
 .main-grid {
+  @include grid-row;
   @include grid-column(12);
   @include grid-column-position(center);
-  margin-top: 1rem;
 
   @include breakpoint(medium) {
     margin-top: 3rem;
+    // padding-right: 0;
+    // padding-left: 0;
   }
 
   &.sidebar-left {
@@ -34,6 +32,9 @@
   .main-content {
     @include breakpoint(small) {
       @include grid-column(12);
+      h2.entry-title a {
+        @include home-h2-font;
+      }
     }
 
     @include breakpoint(medium) {
@@ -50,6 +51,33 @@
       @include grid-column(4);
       margin-top: 1rem;
     }
+
+  }
+}
+
+// home
+.featured-cover {
+  @include grid-column(12);
+
+}
+.home-posts {
+  @include breakpoint(large) {
+    @include grid-column(8);
+  }
+  @include grid-column(12);
+}
+
+.home-events {
+  @include breakpoint(large) {
+    @include grid-column(4);
+  }
+
+  @include grid-column(12);
+
+  .home-events-block {
+    height: 600px;
+    background-color: #cccccc;
+    display: block;
 
   }
 }
