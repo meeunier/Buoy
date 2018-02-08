@@ -14,8 +14,9 @@
     font-weight: 800;
     font-style: italic;
     letter-spacing: 0.05rem;
+    line-height: 1rem;
     text-transform: uppercase;
-    color: $white;
+    color: $primary;
     padding: 2rem;
 }
 
@@ -64,7 +65,7 @@
     font-size: 12px;
     font-family: "Barlow", sans-serif;
     font-weight: 500;
-    color: $white;
+    color: $black;
 }
 
 @mixin button-font {
