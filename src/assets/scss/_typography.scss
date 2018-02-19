@@ -16,12 +16,12 @@
     letter-spacing: 0.05rem;
     line-height: 1rem;
     text-transform: uppercase;
-    color: $primary;
-    padding: 2rem;
+    color: $secondary;
 }
 
 @mixin section-h3-font {
     -webkit-font-smoothing: antialiased;
+    font-size: 18px;
     font-family: "Barlow Semi Condensed", sans-serif;
     font-weight: 600;
     font-style: italic;

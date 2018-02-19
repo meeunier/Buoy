@@ -49,7 +49,7 @@
         display: block;
         float: left;
         width: 20rem;
-        border-bottom: 0.2rem solid $secondary;
+        border-bottom: 0.1rem solid $secondary;
       }
     }
     article {
@@ -103,11 +103,37 @@
 }
 
 .home-events {
+  @include grid-row;
   @include breakpoint(large) {
     @include grid-column(4);
   }
 
   @include grid-column(12);
+
+  ul {
+    @include grid-column(12);
+    padding:0;
+    li.single-event {
+      list-style-type: none;
+      display: block;
+      height: 8rem;
+      a {
+        @include section-h3-font;
+        display: block;
+        width: 100%;
+        height: inherit;
+        padding: 0;
+        span.event-date {
+          @include grid-column(3);
+          height: inherit;
+        }
+        span.event-title {
+          @include grid-column(9);
+          height: inherit;
+        }
+      }
+    }
+  }
 }
 
 .paddlers-section {
