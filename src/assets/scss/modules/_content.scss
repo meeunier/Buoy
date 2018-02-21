@@ -110,6 +110,12 @@
 
   @include grid-column(12);
 
+  button {
+    @include grid-column-position(center);
+    display:block;
+    float: left;
+  }
+
   ul {
     @include grid-column(12);
     padding:0;
@@ -118,16 +124,17 @@
       display: block;
       height: 8rem;
       a {
-        @include section-h3-font;
         display: block;
         width: 100%;
         height: inherit;
         padding: 0;
         span.event-date {
+          @include home-event-date;
           @include grid-column(3);
           height: inherit;
         }
         span.event-title {
+          @include section-h3-font;
           @include grid-column(9);
           height: inherit;
         }

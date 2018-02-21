@@ -55,39 +55,20 @@ get_header(); ?>
 
 		</section>
 		<!-- Event list -->
-		<section class="home-events">
-			<div class="section-title">
-				<h3>Upcoming Events</h3>
-				<span class="section-divider"></span>
-			</div>
-			<?php $events = eo_get_events(array(
-          'numberposts'=>5,
-          'event_start_after'=>'today',
-          'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
-     ));
+	<section class="home-events">
+		
+		<div class="section-title">
+			<h3>Upcoming Events</h3>
+			<span class="section-divider"></span>
+		</div>
 
-     if($events):
-          echo '<ul>';
-          foreach ($events as $event):
-               //Check if all day, set format accordingly
-               $format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format').' '.get_option('time_format') );
-               printf(
-                    '<li class="single-event">
-										<a href="%s">
-										<span class="event-date">%s</span>
-										<span class="event-title">%s</span>
-										</a>
-										</li>',
-                    get_permalink($event->ID),
-										eo_get_the_start($format, $event->ID,null,$event->occurrence_id),
-                    get_the_title($event->ID)
+		<?php get_template_part( 'template-parts/content-home-events', 'none' ); ?>
 
-               );
-          endforeach;
-          echo '</ul>';
-     endif;
- ?>
-		</section>
+		<button class="button">
+			<a href="#">Explore events</a>
+		</button>
+
+	</section>
 		<!-- Paddlers section -->
 	</main>
 	<div class="main-content">
