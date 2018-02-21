@@ -24,12 +24,18 @@
 								 printf(
 											'<li class="single-event">
 											<a href="%s">
-											<span class="event-date">%s</span>
-											<span class="event-title">%s</span>
+											<p class="event-date">
+												<span class="event-day">%s</span>
+												<span class="event-month">%s</span>
+											</p>
+												<p class="event-meta">
+												<span class="event-title">%s</span>
+											</p>
 											</a>
 											</li>',
 											get_permalink($event->ID),
-											eo_get_the_start($format, $event->ID,null,$event->occurrence_id),
+											eo_get_the_start( 'd', $event->ID,null,$event->occurrence_id),
+											eo_get_the_start( 'M', $event->ID,null,$event->occurrence_id),
 											get_the_title($event->ID)
 
 								 );

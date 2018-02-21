@@ -128,19 +128,31 @@
         width: 100%;
         height: inherit;
         padding: 0;
-        span.event-date {
-          @include home-event-date;
-          @include grid-column(3);
-          height: inherit;
-        }
-        span.event-title {
-          @include section-h3-font;
-          @include grid-column(9);
-          height: inherit;
-        }
       }
     }
   }
+}
+
+p.event-date {
+  @include grid-column(3);
+}
+span.event-day {
+  @include home-event-date;
+  font-size: 60px;
+  height: inherit;
+}
+span.event-month {
+  @include home-event-date;
+  font-size: 36px;
+  height: inherit;
+}
+p.event-meta {
+  @include grid-column(9);
+}
+
+span.event-title {
+  @include section-h3-font;
+  height: inherit;
 }
 
 .paddlers-section {
