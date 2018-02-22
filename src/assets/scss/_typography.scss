@@ -11,7 +11,6 @@
 
 @mixin home-h2-font {
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 20px;
     font-weight: 800;
     font-style: italic;
     letter-spacing: 0.05rem;
@@ -23,13 +22,31 @@
 @mixin home-event-date {
     font-family: "Barlow Condensed", sans-serif;
     font-weight: 800;
-    line-height: 2rem !important;
     font-style: italic;
-    letter-spacing: -0.05rem;
-    line-height: 1rem;
+    letter-spacing: normal;
     text-transform: uppercase;
     color: $primary;
-    padding-top: 2rem;
+}
+
+@mixin home-event-country {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: normal;
+    line-height: 1rem;
+    text-transform: uppercase;
+    color: $secondary;
+}
+
+@mixin home-event-title {
+    -webkit-font-smoothing: antialiased;
+    font-size: 20px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    color: $secondary;
+    line-height: normal;
 }
 
 @mixin section-h3-font {

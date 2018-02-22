@@ -15,12 +15,11 @@
 			'event_start_after'=>'today',
 			'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
 			 ));
-
 			 if($events):
+				 		$venue_id = eo_get_venue($event->ID);
+				 		$address_details = eo_get_venue_address($venue_id);
 						echo '<ul>';
 						foreach ($events as $event):
-								 //Check if all day, set format accordingly
-								 $format = ( eo_is_all_day($event->ID) ? get_option('date_format') : get_option('date_format').' '.get_option('time_format') );
 								 printf(
 											'<li class="single-event">
 											<a href="%s">
@@ -29,14 +28,17 @@
 												<span class="event-month">%s</span>
 											</p>
 												<p class="event-meta">
+												<span class="event-country">USA</span>
 												<span class="event-title">%s</span>
+												<span class="event-venue">%s</span>
 											</p>
 											</a>
 											</li>',
 											get_permalink($event->ID),
 											eo_get_the_start( 'd', $event->ID,null,$event->occurrence_id),
 											eo_get_the_start( 'M', $event->ID,null,$event->occurrence_id),
-											get_the_title($event->ID)
+											get_the_title($event->ID),
+											get_post_meta($event->ID, 'event-venue', true)
 
 								 );
 						endforeach;
