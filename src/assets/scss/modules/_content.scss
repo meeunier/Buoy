@@ -48,8 +48,8 @@
       span.section-divider {
         display: block;
         float: left;
-        width: 20rem;
-        border-bottom: 0.2rem solid $secondary;
+        width: 100%;
+        border-bottom: 0.1rem solid $secondary;
       }
     }
     article {
@@ -103,11 +103,80 @@
 }
 
 .home-events {
+  @include grid-row;
   @include breakpoint(large) {
     @include grid-column(4);
   }
 
   @include grid-column(12);
+
+  button {
+    @include grid-column-position(center);
+    display:block;
+    float: left;
+  }
+
+  ul {
+    @include grid-column(12);
+    padding:0 !important;
+    li.single-event {
+      list-style-type: none;
+      display: block;
+      height: 8rem;
+      a {
+        display: block;
+        width: 100%;
+        height: inherit;
+        padding: 0;
+      }
+      p {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
+
+p.event-date {
+  @include grid-column(3);
+  padding-left: 0 !important;
+}
+span.event-day {
+  @include home-event-date;
+  font-size: 65px;
+  line-height: 3rem !important;
+  height: inherit;
+}
+span.event-month {
+  @include home-event-date;
+  font-size: 36px;
+  line-height: 1.5rem !important;
+  height: inherit;
+}
+p.event-meta {
+  @include grid-column(9);
+  padding-left: 0 !important;
+  span {
+    @include grid-column(12);
+    height: inherit;
+    padding: 0 !important;
+  }
+}
+span.event-country {
+  @include home-event-country;
+}
+
+span.event-title {
+  @include home-event-title;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  height: 52px !important;
+}
+
+span.event-venue {
+  @include home-event-country;
 }
 
 .paddlers-section {
