@@ -17,7 +17,6 @@
 			 ));
 			 if($events):
 				 		$venue_id = eo_get_venue($event->ID);
-				 		$address_details = eo_get_venue_address($venue_id);
 						echo '<ul>';
 						foreach ($events as $event):
 								 printf(
@@ -28,17 +27,20 @@
 												<span class="event-month">%s</span>
 											</p>
 												<p class="event-meta">
-												<span class="event-country">USA</span>
+												<span class="event-country">%s</span>
 												<span class="event-title">%s</span>
-												<span class="event-venue">%s</span>
+												<span class="event-venue">%s%s %s</span>
 											</p>
 											</a>
 											</li>',
 											get_permalink($event->ID),
 											eo_get_the_start( 'd', $event->ID,null,$event->occurrence_id),
 											eo_get_the_start( 'M', $event->ID,null,$event->occurrence_id),
+											get_post_meta($event->ID, 'event-country', true),
 											get_the_title($event->ID),
-											get_post_meta($event->ID, 'event-venue', true)
+											get_post_meta($event->ID, 'event-city', true),
+											get_post_meta($event->ID, 'event-state', true) ?  ',' :  '',
+											get_post_meta($event->ID, 'event-state', true)
 
 								 );
 						endforeach;
