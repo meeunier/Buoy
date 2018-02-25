@@ -16,7 +16,9 @@
     letter-spacing: 0.05rem;
     line-height: 1rem;
     text-transform: uppercase;
-    color: $secondary;
+    color: $white;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
 }
 
 @mixin home-event-date {
@@ -30,7 +32,7 @@
 
 @mixin home-event-country {
     font-family: "Barlow Semi Condensed", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 800;
     font-style: italic;
     letter-spacing: normal;
@@ -46,7 +48,7 @@
     font-weight: 400;
     font-style: italic;
     color: $secondary;
-    line-height: normal;
+    line-height: 1.5rem;
 }
 
 @mixin section-h3-font {
@@ -70,6 +72,17 @@
     text-transform: uppercase;
     color: $black;
 }
+
+@mixin h5 {
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.05rem;
+    color: $black;
+}
+
 @mixin section-body-font {
     -webkit-font-smoothing: antialiased;
     font-size: 12px;

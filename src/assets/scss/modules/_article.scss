@@ -1,0 +1,42 @@
+.single-post {
+  .main-grid {
+    margin-top: 0 !important;
+  }
+}
+
+.main-content-article {
+  @include breakpoint(small) {
+  @include grid-column(12);
+  }
+
+  @include breakpoint(medium) {
+    @include grid-column(12);
+  }
+}
+
+.article-sponsor {
+  @include grid-column-position(center);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  h5 {
+    @include h5
+    text-align: center;
+  }
+  a {
+    display: block;
+    height: 3rem;
+    width: 100%;
+  }
+  img {
+    height: inherit;
+  }
+}
+
+article.story-article {
+  @include grid-column-position(center);
+  @include grid-column(8);
+
+  .entry-title {
+    text-align: center;
+  }
+}

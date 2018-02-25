@@ -56,7 +56,7 @@ get_header(); ?>
 		</section>
 		<!-- Event list -->
 	<section class="home-events">
-		
+
 		<div class="section-title">
 			<h3>Upcoming Events</h3>
 			<span class="section-divider"></span>
