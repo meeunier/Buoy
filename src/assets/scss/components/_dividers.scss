@@ -2,3 +2,11 @@
   border-style: dashed;
   margin: 2rem 0;
 }
+.section-title {
+  span.section-divider {
+    display: block;
+    float: left;
+    width: 100%;
+    border-bottom: 0.1rem solid $secondary;
+  }
+}

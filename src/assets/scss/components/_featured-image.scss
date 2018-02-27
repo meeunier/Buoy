@@ -45,7 +45,7 @@
   .featured-hero {
     background-size: cover;
     background-attachment: fixed;
-    background-position: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: rem-calc(300);
 
@@ -55,6 +55,24 @@
 
     @include breakpoint(xlarge) {
       height: rem-calc(550);
+    }
+  }
+}
+
+.more-articles {
+  .more-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: rem-calc(200);
+    margin-top: 3rem;
+
+    @include breakpoint(medium) {
+      height: rem-calc(150);
+    }
+
+    @include breakpoint(xlarge) {
+      height: rem-calc(250);
     }
   }
 }

@@ -28,34 +28,28 @@
 
   // Default template
   .main-content {
-    @include breakpoint(small) {
-    @include grid-column(12);
-    }
-
-    @include breakpoint(medium) {
+      @include breakpoint(small) {
       @include grid-column(12);
-    }
-    h2.entry-title a {
-      @include home-h2-font;
-    }
-    .section-title {
-      @include grid-column(12);
-      margin-bottom: 2rem;
-      h3 {
-      @include section-h3-font;
       }
 
-      span.section-divider {
-        display: block;
-        float: left;
-        width: 100%;
-        border-bottom: 0.1rem solid $secondary;
+      @include breakpoint(medium) {
+        @include grid-column(12);
+      }
+      h2.entry-title a {
+        @include home-h2-font;
       }
     }
     article {
       margin-bottom: 2rem;
     }
   }
+
+  .section-title {
+    @include grid-column(12);
+    margin-bottom: 2rem;
+    h3 {
+    @include section-h3-font;
+    }
 
   .sidebar {
     @include breakpoint(small) {
@@ -184,12 +178,13 @@ span.event-venue {
 }
 
 .paddlers-list {
-  @include breakpoint(large) {
-    @include grid-column(4);
-  }
-  @include grid-column(12);
 
   article {
+    @include breakpoint(large) {
+      @include grid-column(4);
+    }
+    @include grid-column(12);
+
     margin-bottom: 0 !important;
     h4 a {
     @include section-h4-font;
