@@ -15,9 +15,13 @@
   @include breakpoint(medium) {
     @include grid-column(12);
   }
+
+  h1 {
+    @include article-title-font;
+  }
+
   p {
     @include article-body-font;
-    max-width: 740px;
     @include grid-column-position(center);
   }
   p:first-child {
@@ -25,6 +29,26 @@
     font-weight: 800;
     line-height: 2.25rem;
     text-align: justify;
+    max-width: 850px;
+    padding-bottom: 3rem;
+  }
+  p:not(:first-child) {
+    max-width: 740px;
+  }
+  p > img {
+    @include grid-column(12);
+    @include grid-column-position(center);
+    height: rem-calc(200);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include breakpoint(medium) {
+      height: rem-calc(300);
+    }
+
+    @include breakpoint(xlarge) {
+      height: rem-calc(400);
+    }
   }
 }
 

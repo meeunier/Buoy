@@ -2,14 +2,14 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: rem-calc(300);
+  height: rem-calc(200);
 
   @include breakpoint(medium) {
-    height: rem-calc(350);
+    height: rem-calc(250);
   }
 
   @include breakpoint(xlarge) {
-    height: rem-calc(550);
+    height: rem-calc(350);
   }
 }
 
@@ -22,7 +22,7 @@
     }
 
     @include breakpoint(xlarge) {
-      height: rem-calc(800);
+      height: rem-calc(500);
     }
   }
 }
@@ -37,6 +37,23 @@
 
     @include breakpoint(xlarge) {
       height: rem-calc(400);
+    }
+  }
+}
+
+.single-post {
+  .featured-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: rem-calc(300);
+
+    @include breakpoint(medium) {
+      height: rem-calc(350);
+    }
+
+    @include breakpoint(xlarge) {
+      height: rem-calc(550);
     }
   }
 }
