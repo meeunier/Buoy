@@ -44,7 +44,8 @@
 .single-post {
   .featured-hero {
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
+    background-position: cover;
     background-repeat: no-repeat;
     height: rem-calc(300);
 

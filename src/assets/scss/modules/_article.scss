@@ -6,58 +6,12 @@
     margin-top: 2rem;
   }
 }
-
-.main-content-article {
-  @include breakpoint(small) {
-  @include grid-column(12);
-  }
-
-  @include breakpoint(medium) {
-    @include grid-column(12);
-  }
-
-  h1 {
-    @include article-title-font;
-  }
-
-  p {
-    @include article-body-font;
-    @include grid-column-position(center);
-  }
-  p:first-child {
-    font-size: 28px;
-    font-weight: 800;
-    line-height: 2.25rem;
-    text-align: justify;
-    max-width: 850px;
-    padding-bottom: 3rem;
-  }
-  p:not(:first-child) {
-    max-width: 740px;
-  }
-  p > img {
-    @include grid-column(12);
-    @include grid-column-position(center);
-    height: rem-calc(200);
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-
-    @include breakpoint(medium) {
-      height: rem-calc(300);
-    }
-
-    @include breakpoint(xlarge) {
-      height: rem-calc(400);
-    }
-  }
-}
-
 .article-sponsor {
   @include grid-column-position(center);
   padding-top: 3rem;
   padding-bottom: 3rem;
-  h5 {
-    @include h5
+  p.presented-by {
+    @include byline
     text-align: center;
   }
   a {
@@ -73,8 +27,65 @@
 article.story-article {
   @include grid-column-position(center);
   @include grid-column(8);
+}
 
-  .entry-title {
+.main-content-article {
+  @include breakpoint(small) {
+  @include grid-column(12);
+  }
+
+  @include breakpoint(medium) {
+    @include grid-column(12);
+  }
+
+  p.byline.author {
+    @include byline;
     text-align: center;
+  }
+
+  h4.subtitle {
+      @include section-h4-font;
+      text-align: center;
+      font-size: 2rem;
+      padding-top: 2rem;
+      margin:0;
+    }
+
+  h1 {
+    @include article-title-font;
+  }
+
+  .entry-content {
+    p {
+      @include article-body-font;
+      @include grid-column-position(center);
+    }
+    p:first-child {
+      font-size: 1.7rem;
+      font-weight: 800;
+      line-height: 2rem;
+      text-align: justify;
+      max-width: 850px;
+      padding-bottom: 3rem;
+    }
+    p:not(:first-child) {
+      max-width: 740px;
+      padding-bottom: 2rem;
+    }
+    p > img {
+      @include grid-column(12);
+      @include grid-column-position(center);
+      height: rem-calc(200);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+      @include breakpoint(medium) {
+        height: rem-calc(300);
+      }
+
+      @include breakpoint(xlarge) {
+        height: rem-calc(400);
+      }
+    }
   }
 }

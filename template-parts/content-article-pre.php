@@ -11,8 +11,11 @@
 ?>
 
 <div class="article-sponsor">
-	<h5 class="presented-by">Presented by</h5>
+	<p class="presented-by">Presented by</p>
 	<a href="#" title="sponsor">
 		<img class="float-center" src="<?php echo get_template_directory_uri(); ?>/sponsor-medalist.png" alt="sponsor" />
 	</a>
+</div>
+<div class="article-subtitle">
+	<h4 class="subtitle">Tales of a vanlifer lost in Europe</h4>
 </div>
