@@ -85,8 +85,17 @@
 
 @mixin section-body-font {
     -webkit-font-smoothing: antialiased;
-    font-size: 12px;
-    font-family: "Lora", serif;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: $black;
+}
+
+@mixin article-body-font {
+    -webkit-font-smoothing: antialiased;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
     font-weight: normal;
     font-style: normal;
     color: $black;
@@ -134,7 +143,7 @@ $pg-nav: "Barlow Semi Condensed", sans-serif;
 $pg-headings: "Barlow Condensed", sans-serif;
 $pg-sub-headings: "Barlow Semi Condensed", sans-serif;
 $pg-caption: "Barlow Semi Condensed", sans-serif;
-$pg-body: "Lora", serif;
+$pg-body: "Lato", sans-serif;
 
 
 // 2. Base Typography

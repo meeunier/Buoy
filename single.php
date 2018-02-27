@@ -8,8 +8,8 @@
 
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
 <div class="main-container single-post">
+	<?php get_template_part( 'template-parts/featured-image' ); ?>
 	<div class="main-grid">
 		<main class="main-content-article">
 			<?php while ( have_posts() ) : the_post(); ?>
