@@ -16,9 +16,9 @@
 
 	</header>
 	<div>
-		<?php the_title( '<h4 class=""><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );?>
+		<?php the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );?>
 	</div>
-	<div class="more-excerpt">
+	<div>
 		<?php winwar_first_sentence( the_excerpt() ); ?>
 	</div>
 	<button class="button">

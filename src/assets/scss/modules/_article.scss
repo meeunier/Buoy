@@ -96,8 +96,13 @@ article.story-article {
     }
     @include grid-column(12);
     margin-bottom: 0 !important;
-    h4 a {
+    h4 {
     @include section-h4-font;
+    padding-top: 1rem;
+
+    a {
+      color: $black;
+    }
     }
     p {
     @include section-body-font;
