@@ -56,7 +56,7 @@ get_header(); ?>
 		</section>
 		<!-- Event list -->
 	<section class="home-events">
-		
+
 		<div class="section-title">
 			<h3>Upcoming Events</h3>
 			<span class="section-divider"></span>
@@ -95,7 +95,7 @@ get_header(); ?>
 		<div class="paddlers-list">
 
 			<?php /* Start the Loop */ ?>
-			<?php $query = new WP_Query( 'posts_per_page=5' ); ?>
+			<?php $query = new WP_Query( 'posts_per_page=3' ); ?>
 			<?php while ($query->have_posts()) : $query->the_post(); ?>
 			<?php get_template_part( 'template-parts/content-min', get_post_format() ); ?>
 			<?php endwhile; ?>

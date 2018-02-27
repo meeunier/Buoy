@@ -1,8 +1,14 @@
 // Style guide
 // ------------------
 
+$pg-nav: "Barlow Semi Condensed", sans-serif;
+$pg-headings: "Barlow Condensed", sans-serif;
+$pg-sub-headings: "Barlow Semi Condensed", sans-serif;
+$pg-caption: "Barlow Semi Condensed", sans-serif;
+$pg-body: "Lato", sans-serif;
+
 @mixin nav-font {
-    font-family: "Barlow Semi Condensed", sans-serif;
+    font-family: $pg-headings;
     font-weight: 600 !important;
     font-style: italic;
     letter-spacing: 0.08rem;
@@ -10,17 +16,18 @@
 }
 
 @mixin home-h2-font {
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: $pg-headings;
     font-weight: 800;
     font-style: italic;
     letter-spacing: 0.05rem;
     line-height: 1rem;
     text-transform: uppercase;
-    color: $secondary;
+    color: $white;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 @mixin home-event-date {
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: $pg-headings;
     font-weight: 800;
     font-style: italic;
     letter-spacing: normal;
@@ -29,8 +36,8 @@
 }
 
 @mixin home-event-country {
-    font-family: "Barlow Semi Condensed", sans-serif;
-    font-size: 16px;
+    font-family: $pg-sub-headings;
+    font-size: 14px;
     font-weight: 800;
     font-style: italic;
     letter-spacing: normal;
@@ -42,17 +49,17 @@
 @mixin home-event-title {
     -webkit-font-smoothing: antialiased;
     font-size: 20px;
-    font-family: "Barlow Semi Condensed", sans-serif;
+    font-family: $pg-sub-headings;
     font-weight: 400;
     font-style: italic;
     color: $secondary;
-    line-height: normal;
+    line-height: 1.5rem;
 }
 
 @mixin section-h3-font {
     -webkit-font-smoothing: antialiased;
     font-size: 18px;
-    font-family: "Barlow Semi Condensed", sans-serif;
+    font-family: $pg-sub-headings;
     font-weight: 600;
     font-style: italic;
     letter-spacing: 0.05rem;
@@ -63,17 +70,52 @@
 @mixin section-h4-font {
     -webkit-font-smoothing: antialiased;
     font-size: 18px;
-    font-family: "Barlow Semi Condensed", sans-serif;
+    font-family: $pg-sub-headings;
     font-weight: 600;
     font-style: italic;
     letter-spacing: 0.05rem;
+    line-height: normal;
     text-transform: uppercase;
     color: $black;
 }
+
 @mixin section-body-font {
     -webkit-font-smoothing: antialiased;
-    font-size: 12px;
-    font-family: "Lora", serif;
+    font-size: 14px;
+    font-family: $pg-body;
+    font-weight: normal;
+    font-style: normal;
+    color: $black;
+}
+
+@mixin byline {
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  font-family: $pg-sub-headings;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: $black;
+}
+
+@mixin article-title-font {
+    font-family: $pg-headings;
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 0.05rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    text-align: center;
+    color: $black;
+    padding-bottom: 6rem;
+}
+
+@mixin article-body-font {
+    -webkit-font-smoothing: antialiased;
+    font-size: 20px;
+    font-family: $pg-body;
     font-weight: normal;
     font-style: normal;
     color: $black;
@@ -82,7 +124,7 @@
 @mixin footer-headings-font {
     -webkit-font-smoothing: antialiased;
     font-size: 15px;
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: $pg-headings;
     font-weight: 600;
     font-style: italic;
     letter-spacing: 0.05rem;
@@ -100,28 +142,13 @@
 
 @mixin button-font {
     font-size: 1rem;
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: $pg-headings;
     font-weight: 600 !important;
     font-style: italic;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
     color: $primary;
 }
-
-// .fixed-h2 {
-//   position: absolute; /* absolute position (so we can position it where we want)*/
-//   bottom: 0%; /* position will be on bottom */
-//   left: 0%;
-//   background-color: $white;
-//   opacity:0.9; /* transparency */
-//   filter: alpha(opacity=60);
-// }
-
-$pg-nav: "Barlow Semi Condensed", sans-serif;
-$pg-headings: "Barlow Condensed", sans-serif;
-$pg-sub-headings: "Barlow Semi Condensed", sans-serif;
-$pg-caption: "Barlow Semi Condensed", sans-serif;
-$pg-body: "Lora", serif;
 
 
 // 2. Base Typography

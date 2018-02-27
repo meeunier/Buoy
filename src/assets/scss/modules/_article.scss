@@ -1,0 +1,114 @@
+.single-post {
+  .main-grid {
+    margin-top: 0 !important;
+  }
+  .featured-hero {
+    margin-top: 2rem;
+  }
+}
+.article-sponsor {
+  @include grid-column-position(center);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  p.presented-by {
+    @include byline
+    text-align: center;
+  }
+  a {
+    display: block;
+    height: 3rem;
+    width: 100%;
+  }
+  img {
+    height: inherit;
+  }
+}
+
+article.story-article {
+  @include grid-column(8);
+  @include grid-column-position(center);
+
+  @include breakpoint(medium down) {
+    @include grid-column(12);
+    @include grid-column-position(center);
+  }
+}
+
+.main-content-article {
+
+  p.byline.author {
+    @include byline;
+    text-align: center;
+  }
+
+  h4.subtitle {
+      @include section-h4-font;
+      text-align: center;
+      font-size: 2rem;
+      padding-top: 2rem;
+      margin:0;
+    }
+
+  h1 {
+    @include article-title-font;
+  }
+
+  .entry-content {
+    p {
+      @include article-body-font;
+      @include grid-column-position(center);
+    }
+    p:first-child {
+      font-size: 1.7rem;
+      font-weight: 800;
+      line-height: 2rem;
+      text-align: justify;
+      max-width: 850px;
+      padding-bottom: 3rem;
+    }
+    p:not(:first-child) {
+      max-width: 700px;
+      padding-bottom: 2rem;
+    }
+    p > img {
+      @include grid-column(12);
+      @include grid-column-position(center);
+      height: rem-calc(200);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+      @include breakpoint(medium) {
+        height: rem-calc(300);
+      }
+
+      @include breakpoint(xlarge) {
+        height: rem-calc(400);
+      }
+    }
+  }
+}
+
+.more-articles {
+  @include grid-column(12);
+  article {
+    @include breakpoint(medium up) {
+      @include grid-column(4);
+    }
+    @include grid-column(12);
+    margin-bottom: 0 !important;
+    h4 {
+    @include section-h4-font;
+    padding-top: 1rem;
+
+    a {
+      color: $black;
+    }
+    }
+    p {
+    @include section-body-font;
+    }
+  }
+  .more-excerpt {
+    min-height: 6rem;
+  }
+}
