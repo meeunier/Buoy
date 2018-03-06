@@ -13,6 +13,9 @@
 <article id="post-<?php the_ID(); ?>" class="story-article" <?php post_class(); ?>>
 	<header>
 	<?php get_template_part( 'template-parts/content-article-pre', '' ); ?>
+	<div class="article-subtitle">
+		<h4 class="subtitle">Tales of a vanlifer lost in Europe</h4>
+	</div>
 	<?php
 		if ( is_single() ) {
 			the_title( '<h1 class="entry-title">', '</h1>' );

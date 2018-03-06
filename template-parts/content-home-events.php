@@ -11,7 +11,7 @@
 ?>
 
 	<?php $events = eo_get_events(array(
-			'numberposts'=>5,
+			'numberposts'=>8,
 			'event_start_after'=>'today',
 			'showpastevents'=>true,//Will be deprecated, but set it to true to play it safe.
 			 ));

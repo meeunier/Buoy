@@ -32,7 +32,7 @@
 					<li><a	href="#">Adventure</a></li>
 					<li><a	href="#">Paddlers</a></li>
 					<li><a	href="#">Events</a></li>
-					<li><a class="button"	href="#">Register to race</a></li>
+					<li><a class="button"	href="#">Register <span>to race</span></a></li>
 				</ul>
 		</nav>
 

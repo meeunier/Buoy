@@ -7,6 +7,12 @@
 }
 
 nav.header-nav {
+  @include breakpoint(medium up) {
+    margin-bottom: 0;
+  }
+  @include breakpoint(small) {
+    margin-bottom: 2rem;
+  }
   ul.menu {
     @include grid-row;
     // display: table;
@@ -26,8 +32,20 @@ nav.header-nav {
 
         &.button {
           color: $primary-color;
-          margin: 0 0.25rem;
           line-height: 2.4rem;
+          @include breakpoint(large) {
+            margin: 0 2.5rem;
+          }
+
+          @include breakpoint(medium down) {
+            margin: 0;
+            padding: 0;
+          }
+          span {
+            @include breakpoint(medium down) {
+              display: none;
+            }
+          }
         }
       }
     }
