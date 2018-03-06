@@ -83,6 +83,8 @@
   }
 }
 .home-posts {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   @include breakpoint(large) {
     @include grid-column(8);
   }
